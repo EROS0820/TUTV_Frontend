@@ -1,2 +1,2 @@
-# TUTV_Frontend
-TUTV (Android TV) project with Java + Kotlin
+# FastTrack
+Android Mobile App with Google Map

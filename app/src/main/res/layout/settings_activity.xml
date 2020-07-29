@@ -1,0 +1,378 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/app_toolbar1"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/margin_10"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/volume"
+                style="@style/TextAppearance.TextNormal_Black"
+                android:textSize="@dimen/txt_body1"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1"
+                android:background="@color/colorGrey"
+                />
+
+            <!--    SwitchCompat      Play ringtone-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <CheckedTextView
+                    android:id="@+id/notificationCb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Notification"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_default_ringtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:checked="true"
+                    android:text="Add default ringtone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_silent_ringtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/switch_default_ringtone"
+                    android:checked="true"
+                    android:text="Add silent"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+
+
+            </LinearLayout>
+
+            <!-- volume-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <androidx.appcompat.widget.SwitchCompat
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_8"
+                    android:text="@string/volume_Select"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_size_h6"
+                    android:textStyle="bold"
+                    android:id="@+id/switch_play_ringtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_below="@+id/switch_play_ringtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tick_to_enable_the_app_sound"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    />
+
+                <CheckedTextView
+                    android:id="@+id/check_box_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/margin_10"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/notification_setting"
+                style="@style/TextAppearance.TextNormal_Black"
+                android:textSize="@dimen/txt_body1"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1"
+                android:background="@color/colorTextBlack3"
+                />
+
+            <!-- notification_sound-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <androidx.appcompat.widget.SwitchCompat
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_8"
+                    android:id="@+id/switch_notification_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notification_sound"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_size_h6"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:layout_below="@+id/switch_notification_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tick_to_enable_the_app_sound"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    />
+
+            </RelativeLayout>
+
+
+            <!-- notification_ringtone-->
+            <LinearLayout
+                android:id="@+id/ll_tv_notification_ringtone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1"
+                    android:background="@color/colorTextBlack3"
+                    />
+                <TextView
+                    android:id="@+id/tv_notification_ringtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_8"
+                    android:text="@string/notification_ringtone"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_size_h6"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/tv_notification_ringtone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notification_ringtone"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    />
+            </LinearLayout>
+
+            <!--buzzer_interval-->
+            <LinearLayout
+                android:id="@+id/ll_tv_buzzer_interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1"
+                    android:background="@color/colorTextBlack3"
+                    />
+                <TextView
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_8"
+                    android:id="@+id/tv_buzzer_interval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buzzer_interval"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_size_h6"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/tv_buzzer_interval2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_the_buzzer_interval"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    />
+            </LinearLayout>
+
+
+            <!-- buzzer_ringtone-->
+            <LinearLayout
+                android:id="@+id/ll_tv_buzzer_ringtone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1"
+                    android:background="@color/colorTextBlack3"
+                    />
+                <TextView
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_8"
+                    android:id="@+id/tv_buzzer_ringtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buzzer_ringtone"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_size_h6"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/tv_buzzer_ringtone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buzzer_ringtone"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    />
+            </LinearLayout>
+
+
+            <!--select_map_display-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/map_display_setting"
+                style="@style/TextAppearance.TextNormal_Black"
+                android:textSize="@dimen/txt_body1"
+                />
+            <LinearLayout
+                android:id="@+id/ll_tv_select_map_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1"
+                    android:background="@color/colorTextBlack3"
+                    />
+                <TextView
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_8"
+                    android:id="@+id/tv_select_map_display"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_the_map_display"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_size_h6"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/tv_select_map_display2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_the_map_display2"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    />
+            </LinearLayout>
+
+
+
+            <!-- fresh_interval-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="@string/fresh_interval"
+                style="@style/TextAppearance.TextNormal_Black"
+                android:textSize="@dimen/txt_body1"
+                />
+            <LinearLayout
+                android:id="@+id/ll_tv_fresh_interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_5"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1"
+                    android:background="@color/colorTextBlack3"
+                    />
+                <TextView
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_8"
+                    android:id="@+id/tv_fresh_interval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fresh_interval"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_size_h6"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/fresh_interval2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_the_device_list_refresh_interval"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:paddingEnd="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_5"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

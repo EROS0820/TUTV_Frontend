@@ -1,0 +1,2 @@
+include ':app',':ringtonepicker'
+rootProject.name='FastTrack'

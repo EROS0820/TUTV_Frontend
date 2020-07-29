@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.usr.OtpFragment"
+    android:background="@android:color/transparent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- iv_logo -->
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_50"
+                android:layout_marginEnd="@dimen/margin_50"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/logo_new"
+                android:layout_gravity="center"
+                android:contentDescription="@string/logo" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="@dimen/margin_30"
+                android:layout_marginEnd="@dimen/margin_30"
+                android:background="@drawable/shape_bg_white5"
+                android:padding="@dimen/margin_15"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_we_will_auto_verify_the"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.TextBold_Grey"
+                        android:textSize="@dimen/txt_body2"
+                        android:text="@string/we_will_auto_verify_the"
+                        />
+                    <TextView
+                        android:id="@+id/tv_otp"
+                        android:layout_toEndOf="@+id/tv_we_will_auto_verify_the"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5"
+                        style="@style/TextAppearance.TextBold_Grey"
+                        android:textColor="@color/colorTextBlack6"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_body1"
+                        android:text="@string/otp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_sent_to"
+                        android:layout_below="@+id/tv_we_will_auto_verify_the"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        style="@style/TextAppearance.TextBold_Grey"
+                        android:textSize="@dimen/txt_body2"
+                        android:text="@string/sent_to"
+                        />
+                    <TextView
+                        android:id="@+id/tv_mobileNumber"
+                        android:layout_below="@+id/tv_we_will_auto_verify_the"
+                        android:layout_toEndOf="@+id/tv_sent_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5"
+                        style="@style/TextAppearance.TextBold_Grey"
+                        android:textSize="@dimen/txt_body2"
+                        android:text="+91 8802587111"
+                        />
+
+                </RelativeLayout>
+
+                <!-- OTP -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_10"
+                    >
+
+                    <com.alimuzaffar.lib.pin.PinEntryEditText
+                        android:id="@+id/edt_PinEntryEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        android:minWidth="200dp"
+                        android:digits="1234567890"
+                        android:inputType="number"
+                        android:hint="1234"
+                        android:maxLength="4"
+                        android:textIsSelectable="false"
+                        android:cursorVisible="false"
+                        app:pinLineColors="@color/colorAccent"
+                        app:pinLineStroke="2dp"
+                        app:pinLineStrokeSelected="4dp"
+                        android:textSize="@dimen/txt_body1"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDarkGrey"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_30"
+                    >
+                    <TextView
+                        android:id="@+id/tv_don_t_received"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.TextBold_Grey"
+                        android:textSize="@dimen/txt_body2"
+                        android:text="@string/don_t_received"
+                        />
+                    <TextView
+                        android:id="@+id/tv_otp1"
+                        android:layout_toEndOf="@+id/tv_don_t_received"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5"
+                        style="@style/TextAppearance.TextBold_Grey"
+                        android:textColor="@color/colorTextBlack6"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_body1"
+                        android:text="@string/otp1"
+                        />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/btn_resent_otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/txt_caption"
+                    style="@style/TextAppearance.TextNormal_Blue"
+                    android:text="@string/resent_otp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

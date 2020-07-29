@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_logout"
+    android:layout_margin="@dimen/margin_10"
+    android:padding="@dimen/margin_20"
+    >
+
+    <TextView
+        android:id="@+id/logout"
+        style="@style/TextAppearance.TextBold_White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginStart="@dimen/margin_2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/logout2"
+        android:textSize="@dimen/txt_size_20" />
+
+
+    <TextView
+        android:layout_below="@+id/logout"
+        android:id="@+id/logout1"
+        style="@style/TextAppearance.TextBold_White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginStart="@dimen/margin_2"
+        android:text="@string/logout1"
+        android:textSize="@dimen/txt_size_h6"
+        />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/logout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_20"
+        >
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:paddingStart="@dimen/margin_30"
+            android:paddingEnd="@dimen/margin_30"
+            android:text="@string/cancel"
+            style="@style/TextButton"
+            android:textSize="@dimen/btn_txt_size"
+            />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_toEndOf="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_30"
+            android:paddingEnd="@dimen/margin_30"
+            style="@style/TextButton"
+            android:textSize="@dimen/btn_txt_size"
+            android:text="@string/logout2"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
+

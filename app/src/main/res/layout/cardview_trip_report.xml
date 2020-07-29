@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/card1"
+    android:layout_margin="@dimen/margin_2"
+    android:background="@drawable/shape_bg_white"
+    >
+
+    <TextView
+        android:id="@+id/tv_trip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_5"
+        android:lines="1"
+        style="@style/TextAppearance.TextNormal_Black"
+        android:textSize="@dimen/txt_body1"
+        android:text="trip"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_4"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_20"
+                android:background="@drawable/point_green"
+                />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="50dp"
+                android:background="@color/colorTextBlack3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/point_yellow"
+                />
+            <View
+                android:layout_width="4dp"
+                android:layout_height="40dp"
+                android:background="@color/colorTextBlack3"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/point_red"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <!-- Start -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_startAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:maxLines="2"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="startPoint"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_startTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="startTime"
+                    />
+                <TextView
+                    android:id="@+id/tv_startDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="startDate"
+                    />
+
+            </LinearLayout>
+
+            <!-- distance -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/margin_15"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_body1"
+                    android:text="distance"
+                    />
+
+            </LinearLayout>
+
+            <!-- End -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="@dimen/margin_15"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_endAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:lines="2"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="endPoint"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_endTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="endTime"
+                    />
+                <TextView
+                    android:id="@+id/tv_endDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="endDate"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

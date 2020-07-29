@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/margin_15"
+    >
+
+    <ImageButton
+        android:id="@+id/btn_gallery"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="@dimen/margin_20"
+        android:background="@drawable/gallery_icon"
+        android:text="@string/album_camera_image_capture"
+        />
+
+    <ImageButton
+        android:id="@+id/btn_camera"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginStart="@dimen/margin_50"
+        android:background="@drawable/camera_grey"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:id="@+id/card_view1"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_8"
+    >
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_view"
+
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_8"
+
+        app:cardElevation="1dp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        app:cardCornerRadius="75dp"
+
+        card_view:cardCornerRadius="75dp"
+        card_view:cardUseCompatPadding="false"
+        card_view:cardPreventCornerOverlap = "false"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/rl_card"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:animateLayoutChanges="true"
+            >
+
+            <ImageView
+                android:id="@+id/iv_thumbnailLanguage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="@dimen/margin_18"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_license"
+                android:contentDescription="@string/app_name"
+                />
+
+            <TextView
+                android:id="@+id/tv_titleLanguage"
+                android:layout_below="@+id/iv_thumbnailLanguage"
+                style="@style/TextAppearance.TextNormal_Blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_centerInParent="true"
+                android:lines="1"
+                android:text="test"
+                android:textColor="@color/colorTextBlack6"
+                android:textSize="@dimen/txt_size_h5"
+                />
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</LinearLayout>
+

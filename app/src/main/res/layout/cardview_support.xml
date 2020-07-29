@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view"
+    android:layout_gravity="center_horizontal"
+
+    android:layout_marginTop="@dimen/margin_3"
+    android:layout_marginBottom="@dimen/margin_3"
+
+    app:cardBackgroundColor="@color/colorPrimary2"
+    app:cardCornerRadius="11dp"
+    app:cardElevation="2dp"
+
+    card_view:cardCornerRadius="11dp"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cv_thumbnail"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/margin_18"
+            android:layout_marginBottom="@dimen/margin_18"
+            android:layout_marginStart="@dimen/margin_25"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_centerVertical="true"
+            app:civ_circle_background_color="@color/white"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/margin_1"
+            android:src="@drawable/ic_car_white"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/cv_thumbnail"
+            android:layout_centerVertical="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_carName"
+                style="@style/TextAppearance.TextNormal_White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="@string/car_name"
+                android:textSize="@dimen/txt_body2"
+                />
+            <TextView
+                android:id="@+id/tv_carNumber"
+                style="@style/TextAppearance.TextNormal_White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="@string/car_number"
+                android:textSize="@dimen/txt_body2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:layout_marginEnd="@dimen/margin_15"
+            >
+            <Switch
+                android:id="@+id/switchOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_5"
+                android:checked="true"
+                />
+
+         <!--  https://github.com/zcweng/SwitchButton -->
+            <com.suke.widget.SwitchButton
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:sb_button_color="@color/colorPrimary2"
+                app:sb_background="@color/white"
+                app:sb_checked_color="@color/white"
+                app:sb_uncheck_color="@color/white"
+                app:sb_show_indicator="true"
+                app:sb_enable_effect="true"
+                app:sb_checked="false"/>
+
+            <TextView
+                android:id="@+id/tv_onOff"
+                style="@style/TextAppearance.TextNormal_White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_5"
+                android:text="On"
+                android:textSize="@dimen/txt_body2"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
+

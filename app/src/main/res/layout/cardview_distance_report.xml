@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/card1"
+    android:background="@color/colorGrey1"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin_4"
+        android:background="@drawable/shape_bg_white_n0"
+        >
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_vehicle_number"
+            style="@style/TextAppearance.TextNormal_Grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_20"
+            android:layout_weight="1"
+            android:lines="1"
+            android:textColor="@color/colorGrey"
+            android:textSize="@dimen/txt_body2"
+            android:text="s"
+            />
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorIconCode"
+            />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:layout_weight="1"
+            android:lines="1"
+            android:drawableStart="@drawable/celander_n"
+            android:drawablePadding="@dimen/margin_10"
+            style="@style/TextAppearance.TextNormal_Black"
+            android:textSize="@dimen/txt_body2"
+            android:text="1"
+            />
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorIconCode"
+            />
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:layout_weight="1"
+            android:lines="1"
+            android:drawableStart="@drawable/distance"
+            android:drawableTint="@color/colorIconCode"
+            android:drawablePadding="@dimen/margin_10"
+            style="@style/TextAppearance.TextNormal_Black"
+            android:textSize="@dimen/txt_body2"
+            android:text="s"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+

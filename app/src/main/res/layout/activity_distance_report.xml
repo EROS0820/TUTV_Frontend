@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.DistanceReportActivity">
+
+    <include layout="@layout/app_toolbar1"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_80"
+        android:layout_marginBottom="@dimen/margin_20"
+        >
+        <RelativeLayout
+            android:id="@+id/ll_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:padding="@dimen/margin_5"
+            android:background="@drawable/shape_bg_black"
+            >
+            <Spinner
+                android:id="@+id/vehicleSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/down_arrow_grey"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_dateFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_border_grey"
+            android:padding="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_20"
+            >
+            <TextView
+                android:id="@+id/tv_dateFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/calender"
+                android:backgroundTint="@color/colorIconCode"
+                android:drawablePadding="@dimen/margin_10"
+                style="@style/TextAppearance.TextNormal_Black"
+                android:background="@null"
+                android:hint="@string/select_date"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_dateTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_border_grey"
+            android:padding="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            >
+            <TextView
+                android:id="@+id/tv_dateTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/calender"
+                android:backgroundTint="@color/colorIconCode"
+                style="@style/TextAppearance.TextNormal_Black"
+                android:drawablePadding="@dimen/margin_10"
+                android:background="@null"
+                android:hint="@string/select_date"
+                />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:gravity="center_horizontal"
+            android:text="@string/submit"
+            style="@style/TextButton"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

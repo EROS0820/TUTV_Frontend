@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddVehicleActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/toolboor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/app_toolbar1"/>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_below="@+id/toolboor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_20"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_15"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_vehicleBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="@string/vehicleBrand"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_30"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_vehicleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="@string/vehicleName"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_30"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_vehicleType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="@string/vehicleType"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_30"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_vehicleNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="@string/vehicleNumber"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_30"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_OwnerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="@string/OwnerName"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_carPic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/shape_border_grey"
+                    android:layout_marginStart="@dimen/margin_50"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/car_g_new"
+                    />
+                <TextView
+                    android:id="@+id/tv_take_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/iv_carPic"
+                    android:drawableStart="@drawable/camera_grey"
+                    android:drawableTint="@color/white"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:gravity="center_horizontal"
+                    android:text="@string/take_image"
+                    style="@style/TextButton"
+                    />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:gravity="center_horizontal"
+                android:text="@string/add"
+                style="@style/TextButton"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

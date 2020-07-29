@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.LiveTrackingAllActivity"
+    >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+    >
+
+        <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+        />
+
+        <LinearLayout
+                android:id="@+id/h1"
+                android:layout_width="160dp"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:gravity="center|start"
+        >
+
+            <ImageView
+                    android:id="@+id/iv_tool_back_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:src="@drawable/icon_back_blue" />
+            <TextView
+                    android:id="@+id/tv_tool_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:text="@string/all_vehicles"
+                    style="@style/TextTitleHead"
+            />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_below="@+id/h1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:layout_alignParentEnd="true"
+        >
+            <RelativeLayout
+                    android:id="@+id/rl_iv_plus"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/margin_50"
+                    android:background="@drawable/ic_circle_black"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="vertical">
+                <ImageView
+                        android:id="@+id/iv_plus"
+                        android:layout_width="@dimen/margin_30"
+                        android:layout_height="@dimen/margin_30"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/plus_b"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rl_iv_minus"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:background="@drawable/ic_circle_black"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:id="@+id/iv_minus"
+                        android:layout_width="30dp"
+                        android:layout_height="@dimen/margin_5"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/minus_b"
+                />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+                android:layout_alignParentBottom="true"
+                android:id="@+id/tv_MarkerInfo"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginEnd="0dp"
+                android:textAlignment = "textStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_body1"
+                style="@style/TextButton"
+                android:text = "@string/app_name"
+                android:fontFamily="sans-serif-condensed"
+        />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabMarkerInfo"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_white"
+                android:contentDescription="@string/submit"
+                android:layout_margin="3dp" />
+
+
+        <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/ll_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_alignParentBottom="true"
+        >
+            <ImageView
+                    android:id="@+id/iv_iconB1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/news1"
+            />
+
+            <TextView
+                    android:id="@+id/tv_ticket"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:textAlignment = "center"
+                    android:textColor="@color/white"
+                    android:layout_toEndOf="@+id/iv_iconB1"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_body1"
+                    style="@style/TextButton"
+                    android:text = "@string/token_message"
+                    android:singleLine = "true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally = "true"
+                    android:ellipsize = "marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:freezesText="true"
+                    android:fontFamily="sans-serif-condensed"
+            />
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

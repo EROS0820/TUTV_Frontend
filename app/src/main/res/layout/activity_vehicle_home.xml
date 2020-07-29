@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+<!--    style="@style/MaterialSearchViewStyle"-->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        style="@style/SearchStyle"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="true"
+        app:queryHint="@string/vehicleSearch"
+        android:visibility="gone"
+        />
+    <com.miguelcatalan.materialsearchview.MaterialSearchView
+        android:id="@+id/search_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_search_black"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:visibility="gone"
+        />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tv_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_15"
+        android:drawableStart="@drawable/ic_short_text"
+        android:drawableEnd="@drawable/ic_search_black"
+        android:drawablePadding="@dimen/margin_15"
+        android:hint="@string/vehicleSearch"
+        android:padding="@dimen/margin_12"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionSearch"
+        style="@style/SearchStyle2"
+        />
+
+    <TextView
+        android:id="@+id/tv_noNetwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:padding="@dimen/margin_10"
+        style="@style/TextAppearance.TextNormal_White"
+        android:background="@color/red"
+        android:textSize="@dimen/txt_size_h7"
+        android:textStyle="bold"
+        android:text="@string/err_msg_internet"
+        android:gravity="left"
+        android:visibility="gone"
+        />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipeToRefresh">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="vertical"
+            />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/TextAppearance.TextNormal_White"
+        android:textSize="@dimen/txt_size_h7"
+        android:textStyle="bold"
+        android:text="@string/no_result_found1"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        />
+
+
+</LinearLayout>

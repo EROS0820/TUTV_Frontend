@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.ComplaintActivity">
+
+    <include layout="@layout/app_toolbar1"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_20"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/ll_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/shape_bg_black"
+                >
+                <Spinner
+                    android:id="@+id/vehicleSpinner"
+                    android:padding="@dimen/margin_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border5"
+                android:layout_marginTop="@dimen/margin_15"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_15"
+                    android:drawableEnd="@drawable/user_grey"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:background="@null"
+                    android:hint="@string/nameFull"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:layout_marginTop="@dimen/margin_15"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_mobileno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_15"
+                    android:drawableEnd="@drawable/phone_grey"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:maxLength="12"
+                    android:background="@null"
+                    android:hint="@string/mobileno"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_30"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_vehicleNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/car_g_new"
+                    android:drawableTint="@color/colorIconCode"
+                    android:drawablePadding="@dimen/margin_20"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:hint="@string/vehicleNumber"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:layout_marginTop="@dimen/margin_15"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingTop="@dimen/margin_20"
+                >
+                <EditText
+                    android:id="@+id/edit_support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="4"
+                    android:maxLines="6"
+                    android:gravity="top"
+                    android:inputType="text|textMultiLine"
+                    android:scrollbars="vertical"
+                    android:background="@null"
+                    android:hint="@string/complaint"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_35"
+                android:padding="@dimen/margin_13"
+                android:gravity="center_horizontal"
+                android:text="@string/submit"
+                style="@style/TextButton"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

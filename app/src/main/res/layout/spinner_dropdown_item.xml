@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeightSmall"
+    android:ellipsize="marquee"
+
+    android:background="@drawable/shape_bg_white_n0"
+
+    android:drawablePadding="@dimen/margin_10"
+    android:paddingStart="@dimen/margin_20"
+    android:paddingEnd="@dimen/margin_10"
+    android:paddingTop="@dimen/margin_10"
+    android:paddingBottom="@dimen/margin_10"
+
+    android:textSize="@dimen/txt_body2"
+    android:text=""
+    android:textColor="@color/colorGrey"
+
+    />
+
+
+<!-- shape_border
+ * android:layout_height="?android:attr/listPreferredItemHeight"
+
+ * //device/apps/common/assets/res/any/layout/simple_spinner_item.xml
+
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@android:id/text1"
+style="?android:attr/spinnerDropDownItemStyle"
+android:singleLine="true"
+android:layout_width="match_parent"
+android:layout_height="?android:attr/dropdownListPreferredItemHeight"
+android:ellipsize="marquee"/>
+
+-->

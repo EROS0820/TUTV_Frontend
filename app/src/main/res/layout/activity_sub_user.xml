@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SubUserActivity"
+    >
+    <RelativeLayout
+        android:id="@+id/toolboor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/app_toolbar1"/>
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/TextAppearance.TextNormal_White"
+        android:layout_marginStart="@dimen/margin_15"
+        android:textSize="@dimen/txt_size_h7"
+        android:textStyle="bold"
+        android:text="@string/no_result_found1"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerVertical="true"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/toolboor"
+        android:id="@+id/recyclerView_sub_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical"
+        android:layout_above="@+id/tv_add_sub_user"
+        />
+
+    <ListView
+        android:visibility="gone"
+        android:layout_below="@+id/toolboor"
+        android:id="@+id/listView_sub_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical"
+        android:layout_above="@+id/tv_add_sub_user"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/tv_add_sub_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:text="@string/add_sub_user"
+        style="@style/TextButton"
+        android:background="@color/colorPrimary2"
+        />
+
+</RelativeLayout>

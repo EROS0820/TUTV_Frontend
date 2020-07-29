@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_map"
+    tools:context=".ui.user.ForgetActivity">
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_50"
+        android:layout_marginEnd="@dimen/margin_50"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo_new"
+        android:layout_gravity="center"
+        android:contentDescription="@string/logo" />
+    <TextView
+        android:id="@+id/iv_logo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_30"
+        android:src="@drawable/logo_new2"
+        android:layout_gravity="center"
+        android:contentDescription="@string/logo"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="@dimen/margin_60"
+        android:textSize="@dimen/txt_size_h5"
+        android:text="@string/password_forget"
+        style="@style/TextAppearance.TextNormal_Black"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:background="@drawable/shape_bg_white5"
+        android:padding="@dimen/margin_15"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.TextBold_Grey"
+            android:textSize="@dimen/txt_body1"
+            android:layout_gravity="center"
+            android:text="@string/enter_your_login_id"
+            />
+
+        <!-- ID -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_bg_white"
+            android:layout_marginTop="@dimen/margin_20"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_login_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_login_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/user_grey"
+                    android:drawablePadding="@dimen/margin_20"
+                    android:paddingStart="@dimen/margin_12"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:hint="@string/enter_your_email"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            style="@style/TextButton"
+            android:textStyle="bold"
+            android:text="@string/submit"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

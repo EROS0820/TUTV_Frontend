@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#0c0c0c</color>
+    <color name="colorPrimary2">#070707</color>
+    <color name="colorAccent">#1589FF</color>
+    <color name="colorAccent1">#929292</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="colorGrey">#929292</color>
+    <color name="colorGrey1">#41929292</color>
+    <color name="colorGrey2">#CACACA</color>
+    <color name="colorIconCode">#929292</color>
+
+    <color name="red">#FF0000</color>
+    <color name="yellow1">#F7E65E</color>
+    <color name="yellow2">#ffaa1d</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="blue">#1589FF</color>
+    <color name="blue1">#0000FF</color>
+    <color name="green">#008000</color>
+    <color name="green1">#016504</color>
+    <color name="orange">#FFA500</color>
+
+    <color name="colorWhite1">#9CFFFFFF</color>
+    <color name="white1">#3BFFFFFF</color>
+    <color name="white2">#3C9C9898</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="second_slide_buttons">#4A148C</color>
+    <color name="colorTextBlack6">#666666</color>
+    <color name="colorTextBlack3">#333333</color>
+    <color name="colorTextBlack9">#999999</color>
+    <color name="colorDarkGrey">#8A8484</color>
+
+    <color name="colorBlue1">#08D8E3</color>
+    <color name="colorBlue2">#00F2FE</color>
+    <color name="colorBlue3">#4FACFE</color>
+
+
+    <color name="colorBg">#63AFEE</color>
+    <color name="colorBg2">#84BBEC</color>
+
+    <color name="colorFb">#006AB6</color>
+    <color name="colorFb1">#3b5998</color>
+
+    <color name="com_facebook_button_background_color_focused_disabled">#3C5A99</color>
+    <color name="com_facebook_button_background_color_focused">#3C5A99</color>
+    <color name="com_facebook_button_border_color_focused">#3C5A99</color>
+
+</resources>

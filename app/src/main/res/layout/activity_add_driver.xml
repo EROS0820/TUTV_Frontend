@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AddDriverActivity">
+
+    <include layout="@layout/app_toolbar1"
+        android:id="@+id/toolboor"
+        />
+
+
+    <ScrollView
+        android:layout_below="@+id/toolboor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            >
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageViewUser_profile_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_13"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:src="@drawable/profile_default"
+                    />
+
+                <com.backstagesupporters.fasttrack.utils.RoundedImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/imageProfilePic"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/profile_default" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:drawableTint="@color/colorIconCode"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/edit_pic" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:background="@drawable/shape_bg_black"
+                android:orientation="vertical"
+                >
+                <Spinner
+                    android:padding="@dimen/margin_5"
+                    android:id="@+id/vehicleSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/down_arrow_grey"
+                    />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:gravity="center_horizontal"
+                    android:text="Select the vehicle from the list"
+                    style="@style/TextAppearance.TextNormal_Black"
+                    />
+
+                <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                    android:id="@+id/searchMultiSpinnerUnlimited"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    />
+<!--                app:hintText="Multi Selection With Filter Without Limit"-->
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/user_grey"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableTint="@color/colorIconCode"
+                    android:background="@null"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_mobileno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/phone_grey"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableTint="@color/colorIconCode"
+                    android:maxLength="11"
+                    android:background="@null"
+                    android:hint="@string/mobileno"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <TextView
+                    android:id="@+id/tv_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/calender"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableTint="@color/colorIconCode"
+                    android:textColor="@color/colorTextBlack3"
+                    android:background="@null"
+                    android:hint="@string/dob"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_10"
+                    android:drawableStart="@drawable/email"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableTint="@color/colorIconCode"
+                    android:background="@null"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_border_grey"
+                    android:layout_weight="1"
+                    >
+                    <Spinner
+                        android:id="@+id/spinner_city"
+                        android:padding="@dimen/margin_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/down_arrow_grey"
+                        android:text="@string/selectCity"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_border_grey"
+                    android:padding="@dimen/margin_10"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_weight="1"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/pincode"
+                        android:maxLength="6"
+                        android:imeOptions="actionNext"
+                        android:inputType="number" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <Spinner
+                    android:id="@+id/genderSpinner"
+                    android:padding="@dimen/margin_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selectGender"
+                    android:drawableEnd="@drawable/down_arrow_grey"
+                     />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_pan_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:maxLength="12"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:inputType="text"
+                    android:hint="@string/pan_no"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_adhaar_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_license"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableTint="@color/colorIconCode"
+                    android:background="@null"
+                    android:maxLength="12"
+                    android:inputType="number"
+                    android:hint="@string/adhaar_number"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_license_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_license"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:maxLength="12"
+                    android:inputType="text"
+                    android:hint="@string/license_number"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <Spinner
+                    android:id="@+id/spinnerState"
+                    android:padding="@dimen/margin_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/down_arrow_grey"
+                    android:hint="@string/state"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <Spinner
+                    android:id="@+id/spinnerCountry"
+                    android:padding="@dimen/margin_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/down_arrow_grey"
+                    android:hint="@string/country"
+                    />
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_id_prof_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <TextView
+                    android:id="@+id/tv_id_prof_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/camera_grey"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:text="@string/id_prof_image"
+                    android:lines="1"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_pan_card_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <TextView
+                    android:id="@+id/tv_pan_card_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/camera_grey"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:text="@string/pan_card_image"
+                    android:lines="1"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_adhaar_card_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <TextView
+                    android:id="@+id/tv_adhaar_card_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/camera_grey"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:text="@string/adhaar_card_image"
+                    android:lines="1"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_driving_licence_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_border_grey"
+                android:padding="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                >
+                <TextView
+                    android:id="@+id/tv_driving_licence_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/camera_grey"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:text="@string/driving_licence_image"
+                    android:lines="1"
+                    />
+            </RelativeLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:gravity="center_horizontal"
+                android:text="@string/add"
+                style="@style/TextButton"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

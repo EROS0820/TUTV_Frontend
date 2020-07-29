@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_10"
+    android:layout_marginEnd="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_7"
+    android:layout_marginBottom="@dimen/margin_7"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/vehicleBg"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_4"
+            >
+            <TextView
+                android:id="@+id/tv_name_vehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                style="@style/TextAppearance.TextBold_black"
+                android:textSize="@dimen/txt_size_16"
+                android:text="@string/vehicleNumber"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_speedLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="@style/TextAppearance.TextBold_black"
+                android:textSize="@dimen/txt_size_10"
+                android:text="@string/speedLimit"
+                />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_positionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                style="@style/TextAppearance.TextBold_black"
+                android:textSize="@dimen/txt_size_10"
+                android:text="@string/speedLimit"
+                android:layout_gravity="end"
+                />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                style="@style/TextAppearance.TextBold_black"
+                android:textSize="@dimen/txt_size_8"
+                android:text="30 April 2020"
+                android:layout_gravity="end"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_5"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:id="@+id/rl_car_bg"
+                    android:layout_width="@dimen/margin_60"
+                    android:layout_height="@dimen/margin_60"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_circle_blue"
+                    android:elevation="4dp"
+                    >
+                    <ImageView
+                        android:id="@+id/iv_car"
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_35"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_car_white"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_2"
+                    style="@style/TextAppearance.Text_black"
+                    android:textSize="@dimen/txt_size_10"
+                    android:text="@string/status"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_engine_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:id="@+id/rl_engine_bg"
+                    android:layout_width="@dimen/margin_60"
+                    android:layout_height="@dimen/margin_60"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ic_circle_white"
+                    android:elevation="4dp"
+                    >
+                    <ImageView
+                        android:id="@+id/iv_engine"
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/engine_b"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_engine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_2"
+                    style="@style/TextAppearance.Text_black"
+                    android:textSize="@dimen/txt_size_10"
+                    android:text="@string/engine"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:id="@+id/rl_speed"
+                    android:layout_width="@dimen/margin_60"
+                    android:layout_height="@dimen/margin_60"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/circle_white"
+                    android:elevation="4dp"
+                    >
+                    <ImageView
+                        android:id="@+id/iv_speed"
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/speed"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_speed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_2"
+                    style="@style/TextAppearance.Text_black"
+                    android:textSize="@dimen/txt_size_10"
+                    android:text="@string/speed"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_track"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <RelativeLayout
+                    android:id="@+id/rl_track"
+                    android:layout_width="@dimen/margin_60"
+                    android:layout_height="@dimen/margin_60"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/circle_white"
+                    android:elevation="4dp"
+                    >
+                    <ImageView
+                        android:id="@+id/iv_track"
+                        android:layout_width="@dimen/margin_30"
+                        android:layout_height="@dimen/margin_40"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/marker_navigation_red"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_track"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_2"
+                    style="@style/TextAppearance.Text_black"
+                    android:textSize="@dimen/txt_size_10"
+                    android:text="@string/track"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv_address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            style="@style/TextAppearance.TextBold_black"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:textSize="@dimen/txt_size_10"
+            android:text="@string/address"
+            />
+
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_vId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+
+

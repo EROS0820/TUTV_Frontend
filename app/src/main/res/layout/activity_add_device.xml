@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.AddDeviceActivity">
+
+    <include layout="@layout/app_toolbar1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_70"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_border_grey"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_DeviceSrNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_20"
+                android:drawableStart="@drawable/device"
+                android:drawableTint="@color/colorIconCode"
+                android:drawablePadding="@dimen/margin_10"
+                android:background="@null"
+                android:inputType="number"
+                android:hint="@string/devicesrnumber1"
+                />
+        </RelativeLayout>
+
+<!--        sim_no-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_border_grey"
+            android:padding="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_30"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_sim_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/sim"
+                android:drawableTint="@color/colorIconCode"
+                android:drawablePadding="@dimen/margin_10"
+                android:background="@null"
+                android:inputType="number"
+                android:hint="@string/sim_no"
+                />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_70"
+            android:layout_marginBottom="@dimen/margin_60"
+            android:gravity="center_horizontal"
+            android:text="@string/add"
+            style="@style/TextButton"
+            />
+    </LinearLayout>
+
+</LinearLayout>

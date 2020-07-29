@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.NotificationActivity">
+
+    <include layout="@layout/app_toolbar1"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_50"
+        android:visibility="gone"
+        />
+
+    <include layout="@layout/no_data" />
+
+    <TextView
+        android:id="@+id/Welecome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Welcome to Fasttrack"
+        android:textSize="@dimen/txt_size_h5"
+        android:textColor="@color/red"
+        android:layout_gravity="center"
+
+        />
+
+
+</LinearLayout>

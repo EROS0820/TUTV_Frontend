@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.DistanceReportViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolboor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/app_toolbar1"/>
+    </RelativeLayout>
+
+
+    <include layout="@layout/no_data" />
+
+    <LinearLayout
+        android:id="@+id/ll_headDR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolboor"
+        android:layout_marginTop="@dimen/margin_3"
+        android:layout_marginBottom="@dimen/margin_3"
+        >
+        <TextView
+            android:id="@+id/tv_Download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/margin_5"
+            android:text="@string/download_report"
+            style="@style/TextButtonSmall"
+            android:background="@color/black"
+
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerDistanceReportView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_65"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_headDRButtom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGrey"
+        >
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_3"
+                android:layout_marginStart="@dimen/margin_5"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:layout_width="@dimen/margin_18"
+                    android:layout_height="@dimen/margin_18"
+                    android:background="@drawable/calender"
+                    />
+                <TextView
+                    android:id="@+id/tv_from_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_3"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:textSize="@dimen/txt_body2"
+                    android:text="@string/select_date"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/margin_3"
+                android:layout_marginTop="@dimen/margin_1"
+                android:layout_marginStart="@dimen/margin_5"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:layout_width="@dimen/margin_18"
+                    android:layout_height="@dimen/margin_18"
+                    android:background="@drawable/calender"
+                    />
+                <TextView
+                    android:id="@+id/tv_to_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_3"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:textSize="@dimen/txt_body2"
+                    android:text="@string/select_date"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_5"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_1"
+                style="@style/TextAppearance.TextNormal_White"
+                android:textSize="@dimen/txt_body1"
+                android:text="@string/total"
+                />
+
+            <TextView
+                android:id="@+id/tv_total_KM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_1"
+                android:layout_marginStart="@dimen/margin_1"
+                style="@style/TextAppearance.TextNormal_White"
+                android:textSize="@dimen/txt_body1"
+                android:text="@string/total"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

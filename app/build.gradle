@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.backstagesupporters.fasttrack"
+        minSdkVersion 21                                    // https://source.android.com/setup/start/build-numbers
+        targetSdkVersion 29
+        versionCode 29
+        versionName "1.3"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            multiDexKeepFile file('multidex-config.txt')
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':ringtonepicker')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    //retrofit & volley, okhttp
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.4.0'
+
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //// Add the Firebase SDK for Google
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-firestore:21.4.0'          //  Cloud Firestore
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'          //  Analytics
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta01'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.android.gms:play-services-identity:17.0.0'
+    // Map
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.2'          //firebase-messaging
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'androidx.work:work-runtime:2.3.4'
+
+    implementation 'com.android.support:multidex:1.0.3'                 // Support multidex
+    implementation 'de.hdodenhof:circleimageview:3.0.0'                 // circleimageview
+    //RxPermissions
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    // butterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    implementation 'com.alimuzaffar.lib:pinentryedittext:2.0.6'         // 1.3.3' Pin Entry EditText
+    implementation 'com.github.joielechong:countrycodepicker:2.4.1'     // countrycodepicker
+    implementation 'com.github.GrenderG:Toasty:1.4.2'                   // Material design toasty
+    implementation 'com.github.aakira:ExpandableLayout:v1.6.0'          // Expandable
+//    implementation 'com.github.navasmdc:MaterialDesign:1.5@aar'         // MaterialDesign
+//    implementation 'com.makeramen:roundedimageview:2.3.0'               // RoundedImageView
+    implementation 'com.yanzhenjie:album:2.1.3'                         // Album
+    implementation 'agency.tango.android:material-intro-screen:0.0.2'   // Onboarding
+    implementation 'com.github.Shashank02051997:FancyGifDialog-Android:1.2' //FancyGifDialog-Android
+    implementation 'com.github.pratikbutani:MultiSelectSpinner:-SNAPSHOT'   // MultiSelectSpinner
+    implementation 'com.github.autume:CircleProgressDialog:1.0.2'           // CircleProgressDialog
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'              // SwitchButton
+    implementation  'com.miguelcatalan:materialsearchview:1.4.0'       //MaterialSearchView
+
+    implementation 'com.amitshekhar.android:jackson-android-networking:1.0.2'
+    implementation 'io.gloxey.gnm:network-manager:1.0.1'
+}
+
+// Add the following line to the bottom of the file:
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'

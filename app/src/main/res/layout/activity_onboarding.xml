@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".ui.activity.OnboardingActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/txt_size_h5"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:drawablePadding="@dimen/margin_1"
+            style="@style/TextAppearance.TextNormal_Black"
+            android:text="@string/skip"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pager"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/navigation">
+            <TextView
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.TextBold_White"
+                android:background="@color/colorPrimary"
+                android:textSize="@dimen/btn_txt_size"
+                android:gravity="center"
+                android:padding="@dimen/margin_12"
+                android:text="@string/next"
+                />
+        </LinearLayout>
+
+
+
+        <!-- https://github.com/ogaclejapan/SmartTabLayout/ -->
+        <!--<com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_above="@+id/navigation"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:layout_centerHorizontal="true"
+            app:stl_dividerThickness="0dp"
+            app:stl_indicatorColor="#0066cc"
+
+            android:layout_gravity="bottom|center_horizontal"
+            app:stl_clickable="false"
+            app:stl_customTabTextLayoutId="@layout/custom_tab_circle"
+            app:stl_dividerColor="@color/transparent"
+
+            app:stl_indicatorCornerRadius="4dp"
+            app:stl_indicatorGravity="center"
+            app:stl_indicatorInterpolation="linear"
+            app:stl_indicatorThickness="8dp"
+            app:stl_underlineColor="@color/transparent"
+            app:stl_underlineThickness="0dp"
+            />
+-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

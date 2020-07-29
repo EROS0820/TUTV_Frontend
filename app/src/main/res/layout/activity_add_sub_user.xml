@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.AddSubUser"
+    >
+
+    <include layout="@layout/app_toolbar1"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_5"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_border_grey"
+            android:paddingTop="@dimen/margin_10"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/user_grey"
+                android:padding="@dimen/margin_15"
+                android:drawablePadding="@dimen/margin_10"
+                android:background="@null"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_border_grey"
+            android:layout_marginTop="@dimen/margin_10"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:padding="@dimen/margin_15"
+                android:drawablePadding="@dimen/margin_10"
+                android:drawableEnd="@drawable/email"
+                android:drawableTint="@color/colorIconCode"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_border_grey"
+            android:layout_marginTop="@dimen/margin_10"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorIconCode"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin_5"
+                    android:padding="@dimen/margin_10"
+                    android:drawableEnd="@drawable/lock_grey"
+                    android:background="@null"
+                    android:hint="@string/password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_border_grey"
+            android:layout_marginTop="@dimen/margin_10"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_15"
+                android:drawablePadding="@dimen/margin_10"
+                android:drawableEnd="@drawable/phone_grey"
+                android:background="@null"
+                android:maxLength="11"
+                android:hint="@string/mobileno"
+                android:imeOptions="actionDone"
+                android:inputType="phone" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_addList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:gravity="center_horizontal"
+            android:text="Select the vehicle list"
+            style="@style/TextButton10Small"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/shape_border_grey"
+            android:orientation="vertical"
+            >
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/vehicleSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/down_arrow_grey"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:gravity="center_horizontal"
+                android:text="Select the vehicle list"
+                style="@style/TextAppearance.TextNormal_Black"
+                />
+
+            <com.androidbuts.multispinnerfilter.MultiSpinnerSearch
+                android:id="@+id/searchMultiSpinnerUnlimited"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/margin_40"
+                android:layout_margin="10dp"
+                 />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:padding="@dimen/margin_15"
+            android:gravity="center_horizontal"
+            android:text="@string/add"
+            style="@style/TextButton"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

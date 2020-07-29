@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:oden="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.DriverFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_driver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_60"
+        />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15"
+        style="@style/TextAppearance.TextNormal_White"
+        android:textSize="@dimen/txt_size_h7"
+        android:textStyle="bold"
+        android:text="@string/no_result_found1"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerInParent="true"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_addDiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:text="@string/driverAdd"
+        style="@style/TextButton"
+        android:background="@color/colorPrimary2"
+        />
+
+
+
+</RelativeLayout>

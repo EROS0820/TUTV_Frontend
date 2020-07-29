@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/card1"
+    android:layout_margin="@dimen/margin_3"
+    android:background="@drawable/shape_button_blue_light"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button_blue_light"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/relativeH1"
+            android:background="@drawable/shape_button_blue10"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cv_thumbnail_device"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="@dimen/margin_13"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:src="@drawable/ic_car_white"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/btnUpDown"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/ivUpDown"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_arrow_left_white"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_device_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btnUpDown"
+                android:layout_toRightOf="@+id/cv_thumbnail_device"
+                android:layout_centerVertical="true"
+                android:paddingStart="@dimen/margin_10"
+                android:gravity="left"
+                style="@style/TextAppearance.TextNormal_White"
+                android:textSize="@dimen/txt_size_h7"
+                android:text="@string/device_name"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+        <!-- ExpandableLinearLayout -->
+        <com.github.aakira.expandablelayout.ExpandableLinearLayout
+            android:id="@+id/expandableLayout_delete_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeH1"
+            android:orientation="vertical"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_15"
+                >
+                <LinearLayout
+                    android:id="@+id/exH1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingStart="@dimen/margin_20"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_device_serial"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            />
+                        <TextView
+                            android:id="@+id/tv_deviceSrNumber"
+                            style="@style/TextAppearance.TextNormal_White"
+                            android:textSize="@dimen/txt_body2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text="@string/devicesrnumber"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_license"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            />
+                        <TextView
+                            android:id="@+id/tv_licenseNumber"
+                            style="@style/TextAppearance.TextNormal_White"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text="@string/license_number"
+                            android:textSize="@dimen/txt_body2"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_drive_mode"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_driver"
+                            style="@style/TextAppearance.TextNormal_White"
+                            android:textSize="@dimen/txt_body2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text="@string/driver"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_phone_mode"
+                            />
+                        <TextView
+                            android:id="@+id/tv_phone_number"
+                            style="@style/TextAppearance.TextNormal_White"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text="@string/phone_number"
+                            android:textSize="@dimen/txt_body2"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_suspend"
+                    android:layout_below="@+id/exH1"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    style="@style/TextButton10Small"
+                    android:textStyle="bold"
+                    android:text="@string/suspend"
+                    />
+            </RelativeLayout>
+
+        </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
+

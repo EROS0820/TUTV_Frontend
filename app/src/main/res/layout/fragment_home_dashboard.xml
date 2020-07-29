@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.HomeDashboardFragment"
+    >
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="130dp"
+        android:visibility="gone"
+        />
+
+    <com.google.android.gms.maps.MapView
+        android:visibility="gone"
+        android:id="@+id/mapView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="130dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/default_map"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_location_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginEnd="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:background="@drawable/shape_bg_white"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/location_g_new"
+            android:drawableTint="@color/colorPrimary2"
+            android:paddingStart="@dimen/margin_10"
+            android:text="@string/vehicle_location"
+            android:textSize="@dimen/txt_overLine"
+            style="@style/TextAppearance.TextNormal_Black"
+            android:textColor="@color/colorPrimary2"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_speed"
+        android:layout_below="@+id/ll_location_address"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginStart="@dimen/margin_5"
+        android:background="@drawable/ic_circle_black"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="000"
+            android:textSize="@dimen/txt_size_h6"
+            style="@style/TextAppearance.TextNormal_White"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="km/h"
+            android:textSize="@dimen/txt_size_8"
+            style="@style/TextAppearance.TextNormal_White"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFragmentHomeDashboardFullLayout"
+        android:layout_below="@+id/ll_location_address"
+        android:layout_alignParentEnd="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_circle_black"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:layout_marginStart="@dimen/margin_20"
+
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/Img_btn_fullmap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/album_dp_10"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_fullscreen_w"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginEnd="@dimen/margin_25"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_marginBottom="@dimen/margin_2"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:layout_marginEnd="@dimen/margin_10"
+            >
+            <!-- your_car Status-->
+            <LinearLayout
+                android:id="@+id/car_Status_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/shape_bg_black"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_carStatusColor"
+                        android:layout_width="@dimen/margin_15"
+                        android:layout_height="@dimen/margin_15"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_7"
+                        android:src="@drawable/point_blue" />
+
+                    <TextView
+                        android:id="@+id/tv_your_car_is_stopped"
+                        style="@style/TextAppearance.TextNormal_White"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:hint="@string/your_car_is_stopped"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/txt_caption" />
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_your_car_is_stopped_detail"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/tv_your_car_is_stopped_detail"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/txt_caption" />
+
+            </LinearLayout>
+
+            <!-- ll_spinner-->
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/ll_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_bg_black"
+                >
+                <Spinner
+                    android:id="@+id/vehicleSpinner"
+                    android:padding="@dimen/margin_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/down_arrow_grey"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_vehicleSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.TextNormal_White"
+                android:background="@drawable/shape_bg_black"
+                android:drawableStart="@drawable/ic_car_white"
+                android:drawablePadding="@dimen/margin_10"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/vehicleNumber"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/txt_body2"
+                />
+
+            <!--                android:drawableEnd="@drawable/down_arrow_grey"-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape_bg_white"
+            android:layout_weight="0.2"
+            >
+            <ImageView
+                android:id="@+id/iv_zoom"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/target"
+                android:visibility="gone"
+                />
+
+
+            <ImageView
+                android:id="@+id/iv_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/plus"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:drawableTint="@color/colorIconCode"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorIconCode"
+                />
+
+            <ImageView
+                android:id="@+id/iv_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:padding="@dimen/margin_10"
+                android:background="@drawable/minus"
+                android:drawableTint="@color/colorIconCode"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_layout"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_above="@+id/ll_ticket"
+        android:paddingTop="@dimen/margin_5"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingStart="@dimen/margin_5"
+        android:paddingEnd="@dimen/margin_5"
+        >
+        <LinearLayout
+            android:id="@+id/ll_bottom1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- call_driver -->
+            <LinearLayout
+                android:id="@+id/ll_call_driver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="75dp"
+                android:minHeight="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_bg_white"
+                >
+                <ImageView
+                    android:id="@+id/iv_call_driver"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/phone_contact"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_call_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_1"
+                    android:gravity="center"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="@string/call_driver"
+                    android:textColor="@color/colorIconCode"
+                    />
+            </LinearLayout>
+
+            <!-- All Activity -->
+            <LinearLayout
+                android:id="@+id/ll_all_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="75dp"
+                android:minHeight="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_bg_white"
+                >
+                <ImageView
+                    android:id="@+id/iv_all_activity"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/list"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_all_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_1"
+                    android:gravity="center"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="@string/all_activity"
+                    android:textColor="@color/colorIconCode"
+                    />
+            </LinearLayout>
+
+            <!-- Engine (On/Off) -->
+            <LinearLayout
+                android:id="@+id/ll_engine_on_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="75dp"
+                android:minHeight="65dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_bg_white"
+                >
+                <ImageView
+                    android:id="@+id/iv_engine_on_off"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/engine"
+                    />
+                <TextView
+                    android:id="@+id/tv_engine_on_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_1"
+                    android:gravity="center"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="@string/engine_on_off"
+                    android:textColor="@color/colorIconCode"
+                    />
+            </LinearLayout>
+
+            <!-- Car Parking -->
+            <LinearLayout
+                android:id="@+id/ll_car_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="75dp"
+                android:minHeight="65dp"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:id="@+id/iv_car_parking"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/car_parked"
+                    />
+                <TextView
+                    android:id="@+id/tv_car_parking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_1"
+                    android:gravity="center"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="@string/car_parking"
+                    android:textColor="@color/colorIconCode"
+                    />
+            </LinearLayout>
+
+            <!-- SOS -->
+            <LinearLayout
+                android:id="@+id/ll_sos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="75dp"
+                android:minHeight="65dp"
+                android:layout_margin="@dimen/margin_2"
+                android:orientation="vertical"
+                android:background="@drawable/shape_bg_white"
+                >
+                <ImageView
+                    android:id="@+id/iv_sos"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sos_b"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_4"
+                    android:gravity="center"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="@string/sos"
+                    android:textColor="@color/colorIconCode"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        >
+        <ImageView
+            android:id="@+id/iv_iconB1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/news_feed_w"
+            />
+
+        <TextView
+            android:id="@+id/tv_ticket"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:textAlignment = "center"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@+id/iv_iconB1"
+            android:gravity="center"
+            android:textSize="@dimen/txt_body1"
+            style="@style/TextButton"
+            android:text = "@string/token_message"
+            android:singleLine = "true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally = "true"
+            android:ellipsize = "marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

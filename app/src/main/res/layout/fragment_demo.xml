@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_10"
+    tools:context=".ui.fragment.DemoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorBg"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/txt_size_h5"
+                    android:text="@string/request_a_demo"
+                    android:textAllCaps="true"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_caption"
+                    android:text="@string/you_can_request_a_demo_with_us_any_time_you_want"
+                    />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@drawable/shape_button_blue10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:background="@null"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:inputType="text"
+                    android:hint="@string/name"
+                    android:textColorHint="@color/white"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/shape_button_blue10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_email_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:background="@null"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/white"
+                    android:hint="@string/email_address"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/shape_button_blue10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:background="@null"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:inputType="phone"
+                    android:textColorHint="@color/white"
+                    android:hint="@string/phone_number1"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/shape_button_blue10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_date_of_demo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:background="@null"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:inputType="phone"
+                    android:textColorHint="@color/white"
+                    android:hint="@string/date_of_demo"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/shape_button_blue10"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_time_slot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:background="@null"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:inputType="phone"
+                    android:textColorHint="@color/white"
+                    android:hint="@string/time_slot1"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/shape_button_blue10"
+                >
+                <EditText
+                    android:id="@+id/ed_massage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:paddingTop="@dimen/margin_13"
+                    android:background="@null"
+                    style="@style/TextAppearance.TextNormal_White"
+                    android:textColorHint="@color/white"
+                    android:gravity="top"
+                    android:hint="@string/massage"
+                    android:minLines="5"
+                    android:maxLines="6"
+                    />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/btn_send_massage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:paddingStart="@dimen/margin_30"
+                android:paddingEnd="@dimen/margin_30"
+                android:layout_gravity="center"
+                android:text="@string/send_massage"
+                android:textAllCaps="true"
+                android:textSize="@dimen/txt_body1"
+                style="@style/TextButton"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

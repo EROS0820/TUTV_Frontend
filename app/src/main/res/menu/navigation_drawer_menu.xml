@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <!--
+        https://www.android4dev.com/navigation-drawer-using-navigation-view-in-android/
+        -->
+        <item
+            android:id="@+id/navItem_profile"
+            android:icon="@drawable/ic_user"
+            android:title="@string/profile"
+            style="@style/TextAppearance.TextNormal_White"
+            />
+
+        <item
+            android:id="@+id/navItem_support"
+            android:icon="@drawable/ic_support_white"
+            android:title="@string/support" />
+
+        <item
+            android:id="@+id/navItem_vehicle"
+            android:icon="@drawable/ic_car_white"
+            android:title="@string/vehicle" />
+
+        <item
+            android:id="@+id/navItem_driver"
+            android:icon="@drawable/ic_drive"
+            android:title="@string/driver" />
+
+        <item
+            android:id="@+id/navItem_demo"
+            android:icon="@drawable/ic_demo_white"
+            android:title="@string/demo" />
+
+
+        <item
+            android:id="@+id/navItem_about"
+            android:icon="@drawable/ic_info_white"
+            android:title="@string/about" />
+
+
+    </group>
+</menu>
